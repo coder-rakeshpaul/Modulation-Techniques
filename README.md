@@ -1,2 +1,2 @@
 # Modulation-Techniques
-We see various modulation techniques here
+We simulate various modulation techniques ini this project
