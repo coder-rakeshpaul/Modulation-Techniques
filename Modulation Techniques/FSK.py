@@ -1,4 +1,3 @@
-
 import numpy as np
 from numpy import cos , pi , linspace
 import matplotlib.pyplot as plt
@@ -51,7 +50,7 @@ bit_wave, = ax[0].plot(a.t,a.bit_wave())
 carrier_signal, = ax[1].plot(a.t,a.carrier_signal(d=1))
 modulated_signal, = ax[2].plot(a.t,a.modulated_signal())
 spectrum, = ax[3].plot(fftfreq(a.fs,1/a.fs),np.abs(a.spectrum())/a.fs)
-ax[3].set_xlim(-100,100)
+ax[3].set_xlim(-150,150)
 
 ax[0].set_xlabel('time')
 ax[0].set_ylabel('Amplitude')
