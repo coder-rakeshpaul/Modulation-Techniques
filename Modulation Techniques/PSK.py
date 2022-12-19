@@ -1,4 +1,3 @@
-
 import numpy as np
 from numpy import cos , pi , linspace
 import matplotlib.pyplot as plt
@@ -42,8 +41,8 @@ class PSK:
   def spectrum(self):
     return fft(self.modulated_signal())    
 
-B=1001 # inpput bit 
-a = PSK(vc=10 ,fm=10, b=B, fs=60000) # input parameters
+B=1010 # inpput bit 
+a = PSK(vc=10 ,fm=100, b=B, fs=60000) # input parameters
 
 # plotting the signals
 fig , ax = plt.subplots(4,1)
@@ -51,7 +50,7 @@ bit_wave, = ax[0].plot(a.t,a.bit_wave()) # bti wave
 carrier_signal, = ax[1].plot(a.t,a.carrier_signal(d=1)) # carrier
 modulated_signal, = ax[2].plot(a.t,a.modulated_signal()) # PSK signal
 spectrum, = ax[3].plot(fftfreq(a.fs,1/a.fs),np.abs(a.spectrum())/a.fs) # spectrum
-ax[3].set_xlim(-50,50)
+ax[3].set_xlim(-150,150)
 
 ax[0].set_xlabel('time')
 ax[0].set_ylabel('Amplitude')
